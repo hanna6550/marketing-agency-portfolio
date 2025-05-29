@@ -1,10 +1,12 @@
 import React from 'react'
 import Image from 'next/image';
-import aboutImg from "@/public/images/about.jpg"
+import aboutImg from "@/public/images/about.jpg";
+import { motion } from 'framer-motion';
+
 
 function Hero() {
   return (
-    <div className='md:flex items-center max-w-screen-lg mx-auto gap-15 overflow-hidden p-10  h-screen'>
+    <div className='md:flex items-center max-w-screen-lg mx-auto gap-16 p-10'>
       <div className='md:w-1/2'>
         <Image src={aboutImg} alt='about' className='h-[25rem] w-full' />
       </div>
@@ -21,7 +23,7 @@ function Hero() {
           have meaning and purpose, and ours is essentially based on a profound
           philosophy that satisfies both.
         </div>
-        <a href='#' className='text-white bg-amber-900 md:text-2xl text-lg md:py-4 py-2 mt-5 md:mx-20 mx-16 flex justify-center items-center'>
+        <a href='#' className='text-white bg-amber-900 md:text-2xl text-lg md:py-4  py-2 mt-5 md:mx-20 mx-16 flex justify-center items-center'>
                   Explore More
         </a>
       </div>

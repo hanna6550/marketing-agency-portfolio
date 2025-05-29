@@ -36,10 +36,12 @@ const data = [
 
 function Portfolio() {
   return (
-    <div id="service" className="scroll-mt-28">
-      <Title title="Portfolio" className="mt-5" />
+    
+    <div id="portfolio" className="scroll-mt-28">
+      <Title title="Portfolio" className="mt-6" />
 
       <div className="flex flex-col gap-2 max-w-screen-lg mx-auto p-10">
+        <div>
         {data.map((item, index) => (
           <div
             key={item.id}
@@ -64,6 +66,7 @@ function Portfolio() {
           </div>
         ))}
       </div>
+    </div>
     </div>
   );
 }

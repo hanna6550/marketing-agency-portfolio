@@ -11,9 +11,9 @@ import clsx from "clsx";
 
 const links = [
   { id: 1, link: "/", name: "HOME" },
-  { id: 2, link: "#portfolio", name: "PORTFOLIOS" },
-  { id: 3, link: "#service", name: "SERVICES" },
-  { id: 5, link: "#contact", name: "CONTACT US" },
+  { id: 2, link: "#service", name: "SERVICES" },
+  { id: 3, link: "#portfolio", name: "PORTFOLIOS" },
+  { id: 4, link: "#contact", name: "CONTACT US" },
 ];
 
 

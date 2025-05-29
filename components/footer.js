@@ -1,6 +1,8 @@
+import Link from 'next/link';
 import React from 'react';
 import { FaInstagram, FaTwitter, FaFacebookSquare } from 'react-icons/fa';
 import { FaXTwitter, FaTiktok } from 'react-icons/fa6';
+import { LuPhoneCall } from "react-icons/lu";
 
 const currentYear = new Date().getFullYear();
 const footerData = [
@@ -39,19 +41,52 @@ function Footer() {
         </div>
       </div>
       <div className=''>
-        <hr className='border-gray-400 my-8' />
+        <hr className='border-gray-400 mb-8 mt-4' />
       </div>
-      <div className='grid md:grid-cols-4 grid-cols-1 md:mx-8 mx-20 text-white justify-center'>
+      {/* <div className='grid md:grid-cols-4 grid-cols-1 md:mx-8 mx-20 text-white justify-center'>
         {footerData.map((item) => (
           <div key={item.id}>
-            <h1 className='font-bold text-2xl'>{item.title}</h1>
+            <h1 className='font-semibold text-3xl'>{item.title}</h1>
             {item.options.map((option, index) => (
-              <h3 key={index} className='text-gray-300 py-3 pt-3'>
+              <h3 key={index} className='text-gray-300 py-3 pt-3 text-xl'>
                 {option}
               </h3>
             ))}
           </div>
         ))}
+      </div> */}
+      <div className='grid md:grid-cols-3 grid-cols-1 md:mx-8 mx-10 text-white justify-center'>
+        <div>
+          <h1 className='font-semibold text-3xl'>Services</h1>
+          <div className='grid grid-rows-4 md:pt-5'>
+            <div className='text-gray-300 py-3 pt-3 text-xl'>Video Editing</div>
+            <div className='text-gray-300 py-3 pt-3 text-xl'>Graphics Design</div>
+            <div className='text-gray-300 py-3 pt-3 text-xl'>Social Media Managment</div>
+            <div className='text-gray-300 py-3 pt-3 text-xl'>Consultancy</div>
+            <div className='text-gray-300 py-3 pt-3 text-xl'>Consultancy</div>
+          </div>
+        </div>
+        <div>
+          <h1 className='font-semibold text-3xl'>About</h1>
+          <div className='grid grid-rows-4 text-gray-300 py-3 md:pt-5 text-xl'>
+            <Link href={"/"} className='text-gray-300 py-3 pt-3 text-xl'>Portfolio </Link>
+            <Link href={"/"} className='text-gray-300 py-3 pt-3 text-xl'>About </Link>
+            <Link href={"/"} className='text-gray-300 py-3 pt-3 text-xl'>Projects </Link>
+            <Link href={"/"} className='text-gray-300 py-3 pt-3 text-xl'>Services</Link>
+          </div>
+        </div>
+        <div>
+          <h1 className='font-semibold text-3xl'>Address</h1>
+          <div className='grid grid-rows-4 text-gray-300 py-3 md:pt-5 text-xl'>
+            <div className='text-gray-300 py-3 pt-3 text-xl'>Addis Ababa, Ethiopia</div>
+            <div className='text-gray-300 py-3 pt-3 text-xl flex space-x-3'>
+              <LuPhoneCall size={30} className="pt-1"/>  0919208746
+            </div>
+            <div className='text-gray-300 py-3 pt-3 text-xl flex space-x-3'>
+              <LuPhoneCall size={30} className="pt-1"/> 0955327885 
+            </div>
+          </div>
+        </div>
       </div>
 
     </footer>

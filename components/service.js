@@ -53,13 +53,13 @@ function service() {
 ];
 
   return (
-     <div className='scroll-mt-28' id='portfolio'>
+     <div className='scroll-mt-28' id='service'>
         {/* <h1 className='text-center text-lg font-semibold'>RECENT BLOGS</h1>
         <h1 className='text-center text-2xl font-semibold mb-5'>
           Check out the blogs you might have missed
         </h1>
         <h1 className='h-1 md:w-28 w-10 bg-orange-500 md:mt-6 mt-2 mx-auto my-auto'></h1> */}
-        <Title  title={'Service'} className="mt-5" />
+        <Title  title={'Service'} className="" />
         <div className='flex flex-wrap justify-center items-center gap-10 '>
           {data.map((item) => (
             <div

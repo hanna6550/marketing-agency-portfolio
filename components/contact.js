@@ -50,7 +50,7 @@ const ContactUs = () => {
   };
 
   return (
-    <div id='contact' className='scroll-mt-28 md:mt-24'>
+    <div id='contact' className='scroll-mt-28 md:mt-24 md:mb-40'>
       <Title  title={'Contact Us'} className="mt-5" />
 
     <div className='bg-cover bg-center flex justify-center items-center w-full'>

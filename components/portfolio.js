@@ -1,81 +1,71 @@
-import React from 'react'
-import Image from 'next/image'
-import graphics from "@/public/images/graphics.jpg"
-import web from "@/public/images/web.jpg"
-import video from "@/public/images/video1.jpg"
-import tech2 from "@/public/images/tech2.jpg"
+"use client"
+import React, { useState } from 'react';
+import Image from 'next/image';
+import Img1 from "@/public/images/graphics.jpg"
+import Img2 from "@/public/images/video1.jpg"
+import Img3 from "@/public/images/web.jpg"
+import Img4 from "@/public/images/tech2.jpg"
 import Title from "@/components/sectionTitles"
 
-function portfolio() {
-
-  const data = [
+const data = [
   {
-    id: '1',
+    id: 1,
     title: 'Graphics Design',
-    heading: 'Who is Haile Gebresilassie?',
-    description:
-      'Graphics Design is considered one of the greatest runners in history, with victories and world records in almost every long-distance and middle-distance event.',
-    imageSrc: graphics,
-  },{
-    id: '2',
-    title: '3D Design',
-    heading: 'Ethiopian Music Industry',
-    description:
-      "Editing video music has enjoyed a rich tradition of producing some of the world's fastest distance runners over past decades. Abebe Bikila was the star of marathon running during the 1960s.",
-    imageSrc: tech2,
+    desc: 'Graphics Design Lorem ipsum dolor sit amet, consectetur adipiscing elit. In luctus turpis nec dolor posuere vestibulum non id est. Phasellus ut urna quis elit blandit semper sed in justo. Sed viverra mi risus, sit amet elementum massa interdum et.',
+    imgSrc: Img1,
   },
-  
   {
-    id: '3',
+    id: 2,
     title: 'Video Editing',
-    heading: 'Ethiopian Music Industry',
-    description:
-      "Editing video music has enjoyed a rich tradition of producing some of the world's fastest distance runners over past decades. Abebe Bikila was the star of marathon running during the 1960s.",
-    imageSrc: video,
+    desc: 'Video Editing Lorem ipsum dolor sit amet, consectetur adipiscing elit. In luctus turpis nec dolor posuere vestibulum non id est. ',
+    imgSrc: Img2,
   },
   {
-    id: '4',
-    title: 'Website and Mobile App development',
-    heading: 'Ethiopian Athletics',
-    description:
-      "Website and Mobile App development has enjoyed a rich tradition of producing some of the world's fastest distance runners over past decades. Abebe Bikila was the star of marathon running during the 1960s.",
-    imageSrc: web,
+    id: 3,
+    title: 'Website and Mobile Application',
+    desc: 'Website and Mobile Application Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    imgSrc: Img3,
+  },
+  {
+    id: 4,
+    title: 'Social Media Marketing',
+    desc: 'Social Media Marketing Lorem ipsum dolor sit amet, consectetur adipiscing elit. In luctus turpis nec dolor posuere vestibulum non id est. Phasellus ut urna quis elit blandit semper sed in justo. Sed viverra mi risus, sit amet elementum massa interdum et.',
+    imgSrc: Img4,
   },
 ];
 
+function Portfolio() {
   return (
-     <div className='scroll-mt-28' id='portfolio'>
-        {/* <h1 className='text-center text-lg font-semibold'>RECENT BLOGS</h1>
-        <h1 className='text-center text-2xl font-semibold mb-5'>
-          Check out the blogs you might have missed
-        </h1>
-        <h1 className='h-1 md:w-28 w-10 bg-orange-500 md:mt-6 mt-2 mx-auto my-auto'></h1> */}
-        <Title  title={'Portfolio'} className="mt-5" />
-        <div className='flex flex-wrap justify-center items-center gap-10 '>
-          {data.map((item) => (
-            <div
-              key={item.id}
-              className='block max-w-[18rem] text-surface shadow-secondary-1 m-4 '
-            >
-              <div className='relative overflow-hidden bg-cover bg-no-repeat'>
-                <Image className='mb-7' src={item.imageSrc} alt='the image' />
-              </div>
-              <div>
-                <h1 className='mb-7 text-xl font-bold '>{item.title}</h1>
-              </div>
-              <div className='mb-7'>
-                <p className='text-base'>{item.description}</p>
-              </div>
-              <div className='bg-black text-center py-4'>
-                <a href='/insights/detail' className='text-white text-2xl py-2'>
-                  Read More
-                </a>
-              </div>
+    <div id="service" className="scroll-mt-28">
+      <Title title="Portfolio" className="mt-5" />
+
+      <div className="flex flex-col gap-2 max-w-screen-lg mx-auto p-10">
+        {data.map((item, index) => (
+          <div
+            key={item.id}
+            className={`flex flex-col md:flex-row ${
+              index % 2 !== 0 ? 'md:flex-row-reverse' : ''
+            } items-center gap-10 md:h-[22rem]`}
+          >
+            <div className="md:w-1/2">
+              <Image
+                src={item.imgSrc}
+                alt={item.title}
+                className="w-full h-auto object-cover rounded-lg shadow-lg"
+              />
             </div>
-          ))}
-        </div>
-      </div> 
-  )
+            <div className="md:w-1/2">
+              <h2 className="text-3xl font-bold mb-4">{item.title}</h2>
+              <p className="mb-6">{item.desc}</p>
+              <button className="px-8 py-2 text-base font-semibold border border-gray-600 text-black">
+                Read More
+              </button>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
 }
 
-export default portfolio
+export default Portfolio;

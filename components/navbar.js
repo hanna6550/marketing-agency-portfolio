@@ -75,25 +75,25 @@ function Navbar() {
           <a href='#'>
             <FaFacebook
               size={20}
-              className='text-black'
+              className='text-orange-900'
             />
           </a>
           <a href='#'>
             <FaXTwitter
               size={20}
-              className='text-black'
+              className='text-orange-900'
             />
           </a>
           <a href='#'>
             <FaTiktok
               size={20}
-              className='text-black'
+              className='text-orange-900'
             />
           </a>
           <a href='#'>
             <FaInstagram
               size={20}
-              className='text-black'
+              className='text-orange-900'
             />
           </a>
         </div>

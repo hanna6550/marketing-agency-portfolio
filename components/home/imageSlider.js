@@ -27,7 +27,7 @@ export const ImagesSlider = ({
   },
   {
     title: "Video editing",
-    description: "Video editing",
+    description: "Video editing"
   },
   {
     title: "Graphics (logo ,poster)",

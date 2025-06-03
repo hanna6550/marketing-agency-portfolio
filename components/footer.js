@@ -30,10 +30,10 @@ function Footer() {
     <footer className='bottom-0 left-0 w-full bg-black z-50 md:px-32 px-14 py-12'>
       <div className='container grid md:grid-cols-3 grid-cols-1 text-white '>
         <div>
-          <h1 className='text-3xl font-bold text-white'>IKIM Tech Co.</h1>
+          <h1 className='md:text-3xl font-bold text-white'>IKIM Tech Co.</h1>
         </div>
         <div>Copyright © {currentYear} IKIM Tech Co.</div>
-        <div className='flex justify-center gap-4 text-white'>
+        <div className='flex md:justify-center gap-4 text-white'>
           <a href="https://www.facebook.com"><FaFacebookSquare size={20} /></a>
           <a href="https://www.twitter.com"><FaXTwitter size={20} /></a>
           <a href="https://www.tiktok.com"><FaTiktok size={20} /></a>
@@ -57,7 +57,7 @@ function Footer() {
       </div> */}
       <div className='grid md:grid-cols-3 grid-cols-1 md:mx-8 mx-10 text-white justify-center'>
         <div>
-          <h1 className='font-semibold text-3xl'>Services</h1>
+          <h1 className='font-semibold text-3xl md:mt-0 mt-3'>Services</h1>
           <div className='grid grid-rows-4 md:pt-5'>
             <div className='text-gray-300 py-3 pt-3 text-xl'>Video Editing</div>
             <div className='text-gray-300 py-3 pt-3 text-xl'>Graphics Design</div>
@@ -67,7 +67,7 @@ function Footer() {
           </div>
         </div>
         <div>
-          <h1 className='font-semibold text-3xl'>About</h1>
+          <h1 className='font-semibold text-3xl md:mt-0 mt-3'>About</h1>
           <div className='grid grid-rows-4 text-gray-300 py-3 md:pt-5 text-xl'>
             <Link href={"/"} className='text-gray-300 py-3 pt-3 text-xl'>Portfolio </Link>
             <Link href={"/"} className='text-gray-300 py-3 pt-3 text-xl'>About </Link>
@@ -76,7 +76,7 @@ function Footer() {
           </div>
         </div>
         <div>
-          <h1 className='font-semibold text-3xl'>Address</h1>
+          <h1 className='font-semibold text-3xl md:mt-0 mt-3'>Address</h1>
           <div className='grid grid-rows-4 text-gray-300 py-3 md:pt-5 text-xl'>
             <div className='text-gray-300 py-3 pt-3 text-xl'>Addis Ababa, Ethiopia</div>
             <div className='text-gray-300 py-3 pt-3 text-xl flex space-x-3'>

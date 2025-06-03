@@ -1,7 +1,6 @@
 "use client";
 import React, { useState } from "react";
 import Link from "next/link";
-import { motion } from "framer-motion";
 
 import { FaFacebook } from 'react-icons/fa';
 import { FaTiktok } from 'react-icons/fa';

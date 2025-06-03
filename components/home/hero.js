@@ -1,7 +1,6 @@
 import React from 'react'
 import Image from 'next/image';
 import aboutImg from "@/public/images/about.jpg";
-import { motion } from 'framer-motion';
 
 
 function Hero() {
